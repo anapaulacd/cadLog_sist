@@ -7,7 +7,10 @@ class AuthController
     // Criar função reponsavel pelo processo de login
     public function login()
     {
+        // Verificar se a requisição http é do tipo POST, ou seja, se o formulário foi enviado
+if($_SERVER['request_method'] == 'post'){
 
+}
     }
 }
 ?>
