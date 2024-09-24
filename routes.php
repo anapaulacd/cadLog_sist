@@ -1,6 +1,6 @@
 <?php
 // include arquivos de controlador para lidar com diferentes ações 
-require 'controlles/AuthController.php'; // inclui o controlador de autenticação 
+require 'controlles/AutoController.php'; // inclui o controlador de autenticação 
 require 'controlles/userController.php'; //inclui colaborador de usuario 
 require 'controlles/dashboardController.php'; //inclui colaborador de dashboard.
 // Criar instancia dos controladores para utilizar seus métodos.
