@@ -8,8 +8,11 @@
  
 ## Funcionalidades
  * O usuário pode fazer cadastro
+ ![img](img/telacad.png)
+
  * O usuário pode faszer login
- 
+ ![img](img/telalog.png)
+
  
 ## 💻 tecnologias utilizadas
  
