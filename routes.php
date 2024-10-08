@@ -1,26 +1,26 @@
 <?php
-// include arquivos de controlador para lidar com diferentes ações 
-require 'controlles/AutoController.php'; // inclui o controlador de autenticação 
-require 'controlles/userController.php'; //inclui colaborador de usuario 
-require 'controlles/dashboardController.php'; //inclui colaborador de dashboard.
-// Criar instancia dos controladores para utilizar seus métodos.
-$autocontroller = new AuthController(); // Instancia o controlador de autenticação= para poder usar 
-$usercontroller = new userController();
-
-// Coletar a ação url, se não ouver definida, usar 'login' por padrão 
-$action = $_GET['action'] ?? 'ligin'; // Usar operedor de colescencia nula (??) para definir 'login' se 'action' não estiver presente 
-
+// Inclui arquivos de controlador para lidar com diferentes ações
+require 'controller/autocontroller.php'; // inclui o controlador de autenticação
+require 'controller/usercontroller.php'; // inclui o controlador de usuário
+require 'controller/dashboardcontroller.php'; // inclui o controlador de dashboard
+ 
+// Cria instâncias dos controladores para utilizar seus métodos
+$authController = new AuthController(); // Instancia o controlador de autenticação
+$userController = new UserController();
+ 
+// Coleta a ação da URL, se não houver definida, usa 'login' por padrão
+$action = $_GET['action'] ?? 'login'; // Usa operador de coalescência nula (??) para definir 'login' se 'action' não estiver presente
+ 
+// Verifica a ação solicitada e chama o método apropriado do controlador
 switch($action){
-    case 'iogin':
-        $autocontroller->login(); // Chama o método login do controlador de autenticação.
-        break; 
-        case 'register':
-            $userController->register();
-            break;
-        default:
-        $authcontroller->login();
+    case 'login':
+        $authController->login(); // chama o método login do controlador de autenticação
         break;
-    }
-
-
+    case 'register':
+        $userController->register();
+        break;
+    default:
+        $authController->login();
+        break;
+}
 ?>
