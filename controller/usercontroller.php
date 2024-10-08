@@ -1,8 +1,9 @@
 <?php
-// Definição da classe UserCcontroler, reponsáver por gerenciar as ações realacionadas aos usuarios 
-class UserController{
-        // Função responsável por cadastrar o usuário.
-    public function  register()
+// Definição da classe UserController, responsável por gerenciar as ações relacionada aos usuários.
+class UserController
+{
+    // Função responsável por cadastrar o usuário.
+    public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data = [
@@ -13,6 +14,7 @@ class UserController{
             ];
  
             User::create($data);
+            header('location: index.php');
         } else {
             // Se a requisição não for POST (por exemplo se for GET), carrega a pagina de resgistro.
             include 'views/register.php';

@@ -13,6 +13,13 @@ $action = $_GET['action'] ?? 'ligin'; // Usar operedor de colescencia nula (??) 
 switch($action){
     case 'iogin':
         $autocontroller->login(); // Chama o método login do controlador de autenticação.
+        break; 
+        case 'register':
+            $userController->register();
+            break;
+        default:
+        $authcontroller->login();
+        break;
     }
 
 

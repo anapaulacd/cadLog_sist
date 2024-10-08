@@ -70,7 +70,7 @@ a {
 <body>
 <div>
     <h2>Cadastro de usuário</h2>
-    <form action="" method="post">
+    <form action="index.php?action=register.php" method="post">
 
         <label for="name">nome</label>
         <input type="text" name id="name" require>
@@ -93,7 +93,7 @@ a {
 
 
     </form>
-    <a href="">Voltar ao login</a>
+    <a href="index.php?action=login">Voltar ao login</a>
 
    </div> 
 
