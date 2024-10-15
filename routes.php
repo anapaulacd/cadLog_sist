@@ -20,7 +20,14 @@ switch($action){
         $userController->register();
         break;
     default:
-        $authController->login();
+        $authController->index();
         break;
+        case 'logout':
+            $authController ->logout();
+            break;
+    
+        $authController->login(); // chama o método login do controlador de autenticação
+        break;
+
 }
 ?>

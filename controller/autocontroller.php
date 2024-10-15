@@ -32,4 +32,9 @@ class AuthController
             include 'views/login.php';
         }
     }
+    public function logout(){
+        session_start();
+        session_destroy();
+        header('location: index.php');
+    }
 }
