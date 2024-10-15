@@ -38,3 +38,4 @@ class AuthController
         header('location: index.php');
     }
 }
+?>

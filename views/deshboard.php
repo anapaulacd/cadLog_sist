@@ -25,7 +25,7 @@
  <?php endif; ?>
         <br><br><br><br>
         <!-- Link para logout -->
-        <a href="" class="btn">Logout</a>
+        <a href="index.php?action=logout" class="btn">Logout</a>
     </div>
 </body>
  
