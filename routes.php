@@ -20,12 +20,14 @@ switch($action){
     case 'register':
         $userController->register();
         break;
-        case 'logout':
-            $authController ->logout();
+        case 'dashboard':
+            $dashboardController->index();
             break;
-    default:
-        $authController->login(); // chama o método login do controlador de autenticação
-        break;
-
+        case 'logout':
+            $authController->logout();
+            break;
+        default:
+            $authController->login();
+            break;
 }
 ?>
