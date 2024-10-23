@@ -1,5 +1,5 @@
 <?php
-class database
+class Database
 {
     //utiliza padrao singleton, cujo o objeto é 
     private static $instance = null;
@@ -12,10 +12,11 @@ class database
             $user = 'root';
             $password  = '';
             //A conexão usa o driver Mysql (mysql;)e as informaçãoes de host e bd
-            self::$instance = new PDO("msql:host=$host;dbname=$db", $user, $password);
+            self::$instance = new PDO("mysql:host=$host;dbname=$db", $user, $password);
             // Define o modo de erro para e
             self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         return self::$instance;
     }
 }
+?>

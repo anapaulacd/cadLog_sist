@@ -8,7 +8,7 @@ class AuthController
     public function login()
     {
         // Verificar se a requisição http é do tipo POST, ou seja, se o formulário foi enviado
-        if ($_SERVER['request_method'] == 'post') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
 
