@@ -70,16 +70,16 @@ a {
 <body>
 <div>
     <h2>Cadastro de usuário</h2>
-    <form action="index.php?action=register.php" method="post">
+    <form action="index.php?action=register" method="post">
 
         <label for="name">nome</label>
-        <input type="text" name id="name" require>
+        <input type="text" name="nome" id="name" required>
 
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" require>
+        <input type="email" name="email" id="email" required>
 
         <label for="senha">Senha</label>
-        <input type="Senha" name="senha" id="senha" require>
+        <input type="password" name="senha" id="senha" required>
 
         <label for="perfil">Perfil:</label>
         <select name="perfil" id="perfil">

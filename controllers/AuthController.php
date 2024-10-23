@@ -15,20 +15,17 @@ class AuthController
             $user = User::findByEmail($email);
             
             if ($user && password_verify($senha, $user['senha'])) {
-
-
                 session_start();
-
                 //
-                $_ssession['usuario_id'] = $user['id'];
-                $_ssession['perfil'] = $user['perfil'];
+                $_SESSION['usuario_id']    = $user['id'];
+                $_SESSION['perfil']        = $user['perfil'];
 
                 header('location: index.php?action=dashboard');
             } else {
                 echo "Email ou senha incorretos";
             }
         } else {
-            // Se a requisição não for post (por exenplo, get), carrega a página de registro
+            // Se a requisição não for post (por exemplo, get), carrega a página de registro
             include 'views/login.php';
         }
     }
