@@ -153,6 +153,7 @@ a:hover {
                             <?php if ($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor') : ?>
                                 <a href="">Editar</a>
                             <?php endif; ?>
+                            <a href="index.php?edit&id=<?= $user['id']?>">Editar</a>
  
                             <!-- insere botao de exclusao apenas para perfil admin -->
                             <?php if ($_SESSION['perfil'] == 'admin') : ?>

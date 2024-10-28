@@ -36,5 +36,12 @@ class User
         $stmt = $conn->query('SELECT * from usuarios');
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public static function update($id, $data){
+        $conn = Database::getConnection();
+        // prepara a consulta sql para atualizar os dados do usuário
+        $stmt=$conn->prepare('UPDATE usuarios set nome = :nome, email = :email, perfil = :perfil where id = :id');
+        $data['id'] = $id;
+        $stmt->execute($data); 
+    }
 }
 ?>
