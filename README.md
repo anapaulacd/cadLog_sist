@@ -1,6 +1,8 @@
 # cadLog_sist
 ![img](img/telacad.png)
 ![img](img/telalog.png)
+![img](img/telabemvindo.png)
+![img](img/telalista.png)
 ## Descrição
  
  Esse é um projeto que foi feito em sala, nas aulas de programação web no ano de 2024, com a orientação do professor Leonardo Rocha para aumentar o comhecimento e introduzir novos aprendizados. Esse é um projeto que permite com que o usuário realize  cadastro e login no sistema. Estamos aprendendo conseitos de php esse sistema é ligado com o banco de dados
