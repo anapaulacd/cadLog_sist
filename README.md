@@ -34,7 +34,7 @@ Nessa atividade usamos conceitos básicos da linguagem PHP para fazer o backend 
 Pratiquei conceito básico de HTML e CSS.
 * No php os aprendizads foram utilizar o method post,criptografa a senha, padrao singleton, Método público, conexão usa o driver Mysql, Função para localizar usuário pelo email, Função para encontrar usuario pelo id, Função para criar um novo usuario no banco de dados, função para todos os dados de todos os usuarios do banco de dados, Define a classe com base no perfil.
  ## processo
- Este sistema ainda não está pronto. O que ja está ponto é as paginas de login onte o usuário pode fazer o login colocando  email e senha a pagina está estilizada com css foi colocado cor, borda, as caixas de texto para inserir senha e email e os botoes de login e cadastrar-se. Os mesmos elementos foram colocados na pagina register incluindo o campo nome e um campo de para especificar se o usuário é Admim, gestor, colasborador
+ Este sistema ainda não está pronto. O que ja está ponto é as paginas de login onte o usuário pode fazer o login colocando  email e senha a pagina está estilizada com css foi colocado cor, borda, as caixas de texto para inserir senha e email e os botoes de login e cadastrar-se. Os mesmos elementos foram colocados na pagina register incluindo o campo nome e um campo de para especificar se o usuário é Admim, gestor, colasborador. Agora os usuários gestor e admim podem editar os dados que foram cadastrados e o usuário adimin pode escluir usuários para isso foi criada uma tela para editar e botoes de editar e excluir tudo isso está ligado com banco de dasdos.
 
 
  
