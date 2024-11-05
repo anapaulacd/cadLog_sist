@@ -11,18 +11,18 @@
 <body class="edit-body">
 <div class="edit-container">
 <h2>Editar Usuário</h2>
-<form method="post" action="" class="edit-form">
+<form method="post" action="index.php?action=edt&id=<?php $user['id']?>" class="edit-form">
 <label for="nome">Nome:</label>
-<input type="text" name="nome" id="nome" value="" required>
+<input type="text" name="nome" id="nome" value=" <?php $user['nome']?>"required>
  
             <label for="email">Email:</label>
-<input type="email" name="email" id="email" value="" required>
+<input type="email" name="email" id="email" value="<?php $user['email']?>" required>
  
             <label for="perfil">Perfil:</label>
 <select name="perfil" id="perfil">
-<option value="">Admin</option>
-<option value="" >Gestor</option>
-<option value="" >Colaborador</option>
+<option value="adimn" <?php $user['perfil'] == 'admin'? 'selected' : ''?>>Admin</option>
+<option value="gertor" <?php $user['perfil'] == 'gestor'? 'selected' : ''?> >Gestor</option>
+<option value="colaboredor" <?php $user['perfil'] == 'colaborador'? 'selected' : ''?> >Colaborador</option>
 </select>
  
             <button type="submit" class="btn">Salvar</button>
