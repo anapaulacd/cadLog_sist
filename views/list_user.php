@@ -1,176 +1,175 @@
 <?php
 //Verifica se tem um perfil detectado se tiver inicia o html
 session_start();
- 
-if(isset($_SESSION['perfil'])):
- 
+
+if (isset($_SESSION['perfil'])) :
+
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
- 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuários</title>
-    <link rel="stylesheet" type='text/css' media='screen' href="css/list.css"> <!-- Link para o arquivo CSS -->
-    <style>
-/* Estilo geral */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-body {
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle, rgba(140, 216, 222, 1) 0%, rgba(20, 41, 193, 1) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    text-align: center;
-}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Usuários</title>
+        <link rel="stylesheet" type='text/css' media='screen' href="css/list.css"> <!-- Link para o arquivo CSS -->
+        <style>
+            /* Estilo geral */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-/* Estilo do container principal */
-.container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-}
+            body {
+                font-family: Arial, sans-serif;
+                background: radial-gradient(circle, rgba(140, 216, 222, 1) 0%, rgba(20, 41, 193, 1) 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                text-align: center;
+            }
 
-/* Título da página */
-h2 {
-    color: #1429c1;
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+            /* Estilo do container principal */
+            .container {
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 600px;
+            }
 
-/* Estilo da tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    font-size: 16px;
-}
+            /* Título da página */
+            h2 {
+                color: #1429c1;
+                margin-bottom: 20px;
+                font-size: 24px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-}
+            /* Estilo da tabela */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
 
-th {
-    background-color: #1429c1;
-    color: white;
-    text-transform: uppercase;
-}
+            th,
+            td {
+                padding: 12px;
+                text-align: left;
+            }
 
-td {
-    background-color: #f3f3f3;
-    border-bottom: 1px solid #ddd;
-}
+            th {
+                background-color: #1429c1;
+                color: white;
+                text-transform: uppercase;
+            }
 
-tr:hover {
-    background-color: #e0e0e0;
-}
+            td {
+                background-color: #f3f3f3;
+                border-bottom: 1px solid #ddd;
+            }
 
-.styled-table thead tr {
-    background-color: #1429c1;
-    color: white;
-    text-align: left;
-}
+            tr:hover {
+                background-color: #e0e0e0;
+            }
 
-.styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
+            .styled-table thead tr {
+                background-color: #1429c1;
+                color: white;
+                text-align: left;
+            }
 
-.styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #1429c1;
-}
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
 
-.styled-table tbody tr.active-row {
-    font-weight: bold;
-    color: #1429c1;
-}
+            .styled-table tbody tr:last-of-type {
+                border-bottom: 2px solid #1429c1;
+            }
 
-/* Links para ações (Editar, Excluir) */
-a {
-    color: #1429c1;
-    text-decoration: none;
-}
+            .styled-table tbody tr.active-row {
+                font-weight: bold;
+                color: #1429c1;
+            }
 
-a:hover {
-    text-decoration: underline;
-    color: #0e1b91;
-}
+            /* Links para ações (Editar, Excluir) */
+            a {
+                color: #1429c1;
+                text-decoration: none;
+            }
 
-/* Botão de voltar */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1429c1;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
+            a:hover {
+                text-decoration: underline;
+                color: #0e1b91;
+            }
 
-.btn:hover {
-    background-color: #0e1b91;
-}
+            /* Botão de voltar */
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #1429c1;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
 
-</style>
-</head>
- 
-<body class="<? $_SESSION['perfil'] ?>"> <!-- Define a classe com base no perfil do usuário -->
-    <div class="container">
-        <h2>Lista de Usuários</h2>
-        <table class="styled-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Perfil</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
- 
-                <?php foreach ($users as $user) : ?>
+            .btn:hover {
+                background-color: #0e1b91;
+            }
+        </style>
+    </head>
+
+    <body class="<? $_SESSION['perfil'] ?>"> <!-- Define a classe com base no perfil do usuário -->
+        <div class="container">
+            <h2>Lista de Usuários</h2>
+            <table class="styled-table">
+                <thead>
                     <tr>
-                        <td><?= $user['id'] ?></td>
-                        <td><?= $user['nome'] ?></td>
-                        <td><?= $user['email'] ?></td>
-                        <td><?= $user['perfil'] ?></td>
-                        <td>
-                            <?php if ($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor') : ?>
-                                <a href="index.php?action=edit&id=<?=$user['id']?>">Editar</a>
-                            <?php endif; ?>
-                            
- 
-                            <!-- insere botao de exclusao apenas para perfil admin -->
-                            <?php if ($_SESSION['perfil'] == 'admin') : ?>
-                                <a href="">Excluir</a>
-                            <?php endif; ?>
-                        </td>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Perfil</th>
+                        <th>Ações</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
- 
-        <a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a>
-    </div>
-</body>
- 
-</html>
-<?php else: ?>
+                </thead>
+                <tbody>
+
+                    <?php foreach ($users as $user) : ?>
+                        <tr>
+                            <td><?= $user['id'] ?></td>
+                            <td><?= $user['nome'] ?></td>
+                            <td><?= $user['email'] ?></td>
+                            <td><?= $user['perfil'] ?></td>
+                            <td>
+                                <?php if ($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor') : ?>
+                                    <a href="index.php?action=edit&id=<?= $user['id'] ?>">Editar</a>
+                                <?php endif; ?>
+
+
+                                <!-- insere botao de exclusao apenas para perfil admin -->
+                                <?php if ($_SESSION['perfil'] == 'admin') : ?>
+                                    <a class="ex" href="index.php?action=delete&id=<?= $user['id'] ?>">Excluir</a>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+
+            <a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a>
+        </div>
+    </body>
+
+    </html>
+<?php else : ?>
     <p>Erro: Você não tem permissão para vizualizar essa página</p>
-    <?php endif; ?>
- 
+<?php endif; ?>
